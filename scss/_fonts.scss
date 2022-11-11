@@ -1,0 +1,59 @@
+@font-face{
+  font-family: 'Gramatika';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Gramatika-Regular'),
+       url('../fonts/Gramatika-Regular.woff2') format("woff2"),
+       url('../fonts/Gramatika-Regular.woff') format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Gramatika';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Gramatika-Medium'),
+       url('../fonts/Gramatika-Medium.woff2') format("woff2"),
+       url('../fonts/Gramatika-Medium.woff') format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Gramatika';
+  font-weight: 300;
+  font-style: italic;
+  src: local('Gramatika-Light-italic'),
+       url('../fonts/Gramatika-Light-italic.woff2') format("woff2"),
+       url('../fonts/Gramatika-Light-italic.woff') format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Gramatika';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Gramatika-Light'),
+       url('../fonts/Gramatika-Light.woff2') format("woff2"),
+       url('../fonts/Gramatika-Light.woff') format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Gramatika';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Gramatika-Bold'),
+       url('../fonts/Gramatika-Bold.woff2') format("woff2"),
+       url('../fonts/Gramatika-Bold.woff') format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Gramatika';
+  font-weight: 700;
+  font-style: italic;
+  src: local('Gramatika-Bold-Italic'),
+       url('../fonts/Gramatika-Bold-Italic.woff2') format("woff2"),
+       url('../fonts/Gramatika-Bold-Italic.woff') format("woff");
+  font-display: swap;
+}

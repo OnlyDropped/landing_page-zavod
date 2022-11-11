@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap");
+@import "fonts";
+@import "vars";
+@import "reset";
+@import "global";
+.header {
+  background: url("../img/header-bg.png") center center no-repeat fixed;
+}
+.header-nav {
+  background: linear-gradient(90deg, rgba(4, 6, 5, 0.225) 0%, rgba(5, 7, 6, 0.45) 100%);
+  padding: 12px 0 11px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 auto;
+  }
+  &__span {
+    animation: status 2s ease-in-out infinite alternate;
+    @extend %gramatica-500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #53db4d;
+    margin-left: auto;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: -9px;
+      top: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #00d62f;
+    }
+  }
+  @keyframes status {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  &__phone {
+    @extend %gramatica-700-normal;
+    font-size: 21px;
+    line-height: 32px;
+    color: #e1e1e1;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: url("../img/icons/call.png");
+      left: -17px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.header-body {
+  padding: 138px 0 162px;
+  &__inner {
+    max-width: 715px;
+    width: 100%;
+  }
+  &__title {
+    @extend %gramatica-500;
+    font-size: 48px;
+    line-height: 120%;
+    color: #dedede;
+    margin-bottom: 55px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+    max-width: 331px;
+    width: 100%;
+    margin-bottom: 46px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    @extend %inter-regular;
+    font-size: 18px;
+    line-height: 22px;
+    color: #dedede;
+  }
+  &__price {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 20px 60px;
+  }
+}
+.order {
+  padding: 64px 0 32px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 50px;
+    perspective: 1000px;
+    perspective-origin: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 350px));
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 350px;
+    width: 100%;
+    min-height: 550px;
+    background: url("../img/order/card-bg.png") center center no-repeat;
+    background-size: cover;
+    box-shadow: 0px 50px 200px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 12px 18px 23px;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: translate(5px, 5px) translateZ(5px) rotateZ(-5deg);
+      transform-style: preserve-3d;
+      transform-origin: center;
+    }
+  }
+  &__img {
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  &__img:nth-child(1) {
+    width: 149px;
+    height: 206px;
+  }
+  &__img:nth-child(2) {
+    width: 237px;
+    height: 162px;
+  }
+  &__img:nth-child(3) {
+    width: 132px;
+    height: 208px;
+  }
+  &__body {
+    min-height: 288px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1e1e1e;
+  }
+  &__heading {
+    @extend %gramatica-500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 21px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -10px;
+      width: 132px;
+      height: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url("../img/order/line.svg");
+    }
+  }
+  &__text {
+    @extend %gramatica-500;
+    margin-bottom: 15px;
+  }
+  &__description {
+    @extend %gramatica-400;
+  }
+}
+.work{
+  padding: 32px 0 0;
+  &__inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 44px;
+  }
+  &__card{
+    width: 280px;
+    height: 195px;
+    overflow: hidden;
+  }
+  &__img{
+    width: 280px;
+    height: 195px;
+    object-position: center;
+    object-fit: cover;
+    transition: all .4s ease-in-out;
+    &:hover{
+      scale: 1.05;
+    }
+  }
+}
+@import "media";
