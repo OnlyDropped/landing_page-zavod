@@ -4,7 +4,7 @@
 @import "reset";
 @import "global";
 .header {
-  background: url("../img/header-bg.png") center center no-repeat fixed;
+  background: url("../img/header-bg.png") center center no-repeat;
 }
 .header-nav {
   background: linear-gradient(90deg, rgba(4, 6, 5, 0.225) 0%, rgba(5, 7, 6, 0.45) 100%);
@@ -108,6 +108,191 @@
     padding: 20px 60px;
   }
 }
+.details {
+  background: url("../img/details-bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 63px 0 38px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px 5px;
+    margin-bottom: 24px;
+  }
+  &__card {
+    text-align: center;
+    img {
+      margin-bottom: 31px;
+    }
+    span {
+      @extend %gramatica-400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #1e1e1e;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        width: 132px;
+        height: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url("../img/order/line.svg");
+      }
+    }
+  }
+  &__span {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      width: 100%;
+      height: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url("../img/order/line.svg") center center no-repeat;
+    }
+  }
+}
+.company {
+  background-size: cover;
+  padding: 135px 0 112px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background: url("../img/line.png") center center no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -38px;
+    height: 109px;
+    width: 100%;
+    background-size: cover;
+    z-index: 40;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #dedede;
+    margin-bottom: 44px;
+  }
+  &__info {
+    max-width: 580px;
+    width: 100%;
+  }
+  &__list {
+    max-width: 449px;
+    width: 100%;
+    margin: auto auto 20px auto;
+  }
+  &__item {
+    @extend %inter-regular;
+    font-size: 16px;
+    line-height: 19px;
+    color: #dedede;
+    padding-left: 40px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 7px;
+      background: url("../img/company/check.png");
+      width: 25px;
+      height: 24px;
+    }
+    & + .company__item {
+      margin-top: 15px;
+    }
+  }
+  &__call-back {
+    display: inline-block;
+    margin-left: 100px;
+  }
+}
+.company-slider {
+  max-width: 338px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  &__item {
+    max-width: 338px;
+    width: 100%;
+    min-height: 472px;
+    margin: 0 5px;
+  }
+  &__card {
+    max-width: 338px;
+    width: 100%;
+    min-height: 472px;
+  }
+  &__img {
+    width: 338px;
+    height: 472px;
+    object-fit: cover;
+  }
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0px 4px;
+    bottom: -21px;
+    z-index: 1;
+  }
+  .slick-dots li {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #a6a6a6;
+    transition: all 0.6s ease-in-out;
+  }
+  .slick-dots li.slick-active {
+    background: #0071ff;
+  }
+  .slick-arrow {
+    z-index: 99;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 40px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .slick-next.slick-arrow {
+    right: -62px;
+    margin-left: auto;
+  }
+  .slick-prev.slick-arrow {
+    left: -62px;
+    transform: translateY(-50%) rotateY(-180deg);
+  }
+  .slick-arrow.slick-disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
 .order {
   padding: 64px 0 32px;
   &__inner {
@@ -170,7 +355,7 @@
     position: relative;
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       bottom: -10px;
       width: 132px;
       height: 6px;
@@ -187,26 +372,26 @@
     @extend %gramatica-400;
   }
 }
-.work{
+.work {
   padding: 32px 0 0;
-  &__inner{
+  &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px 44px;
   }
-  &__card{
+  &__card {
     width: 280px;
     height: 195px;
     overflow: hidden;
   }
-  &__img{
+  &__img {
     width: 280px;
     height: 195px;
     object-position: center;
     object-fit: cover;
-    transition: all .4s ease-in-out;
-    &:hover{
+    transition: all 0.4s ease-in-out;
+    &:hover {
       scale: 1.05;
     }
   }
