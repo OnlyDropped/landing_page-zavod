@@ -12,9 +12,22 @@ $('.company-slider').slick({
   nextArrow: '<button type="button" class="slick-next"><img src="img/company/next.svg" alt=""></button>',    
 })
 
-const btn = document.querySelector('.header-nav__button');
+// const btn = document.querySelector('.header-nav__button');
+// btn.addEventListener('click', function (e) {
+//   console.log(e.offsetX);
+//   console.log(e.offsetY);
+//   console.log(e.currentTarget);
+// })
+
+const btn = document.querySelector('.company__call-back');
+const overlay = document.querySelector('.overlay');
+const close = document.querySelector('.close');
+
 btn.addEventListener('click', function (e) {
-  console.log(e.offsetX);
-  console.log(e.offsetY);
-  console.log(e.currentTarget);
+  e.preventDefault();
+  overlay.classList.add('overlay__active');
+})
+
+close.addEventListener('click', () => {
+  overlay.classList.remove('overlay__active');
 })
