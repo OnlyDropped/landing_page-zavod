@@ -19,6 +19,21 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    span {
+      max-width: 100px;
+      width: 100%;
+      padding-left: 10px;
+      border-left: 2px solid #e1e1e1;
+      @extend %gramatica-500;
+      font-size: 12px;
+      line-height: 140%;
+      color: #fff;
+    }
+  }
   &__contact {
     display: flex;
     flex-direction: column;
@@ -67,6 +82,60 @@
       left: -17px;
       top: 50%;
       transform: translateY(-50%);
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    display: none;
+    span {
+      position: absolute;
+      background: #0071ff;
+      height: 4px;
+      border-radius: 3px;
+      top: 5px;
+    }
+    span:nth-child(1) {
+      width: 18px;
+      left: 0;
+      transition: 0.8s ease-in-out;
+    }
+    span:nth-child(2),
+    span:nth-child(3) {
+      width: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 1.8s ease-in-out;
+      transition-delay: 0.1s;
+    }
+    span:nth-child(4) {
+      width: 18px;
+      right: 0;
+      bottom: 5px;
+      margin-top: auto;
+      transition: 0.8s ease-in-out;
+    }
+  }
+  &__btn--active {
+    span:nth-child(4) {
+      width: 0px;
+      transition: 2s ease-in-out;
+    }
+    span:nth-child(1) {
+      width: 0;
+      transition: 2s ease-in-out;
+    }
+    span:nth-child(2) {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+    span:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(-135deg);
     }
   }
 }
@@ -609,7 +678,7 @@
 
 .footer-top {
   padding: 135px 0 82px;
-    position: relative;
+  position: relative;
   background: url("../img/content/bg.jpg");
   &::after {
     position: absolute;
@@ -623,17 +692,17 @@
     background-size: cover;
     z-index: 40;
   }
-  .title{
+  .title {
     max-width: 755px;
-    color: #DEDEDE;
+    color: #dedede;
     margin: 0 auto 49px;
   }
-  &__inner{
+  &__inner {
     display: flex;
     justify-content: space-between;
   }
 }
-.footer-bottom{
+.footer-bottom {
   padding: 12px 0 11px;
   background: rgba(0, 0, 0, 1);
 }

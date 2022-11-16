@@ -9,7 +9,15 @@ $('.company-slider').slick({
   dots: true,  
   infinite: false,
   prevArrow: '<button type="button" class="slick-prev"><img src="img/company/next.svg" alt=""></button>',
-  nextArrow: '<button type="button" class="slick-next"><img src="img/company/next.svg" alt=""></button>',    
+  nextArrow: '<button type="button" class="slick-next"><img src="img/company/next.svg" alt=""></button>',
+    responsive: [
+    {
+      breakpoint: 821,
+      settings: {
+        arrows: false,
+      }
+    },
+  ]    
 })
 
 // const btn = document.querySelector('.header-nav__button');
@@ -30,4 +38,10 @@ btn.addEventListener('click', function (e) {
 
 close.addEventListener('click', () => {
   overlay.classList.remove('overlay__active');
+})
+
+
+const button = document.querySelector('.header-nav__btn');
+button.addEventListener('click', () => {
+  button.classList.toggle('header-nav__btn--active')
 })
