@@ -45,3 +45,17 @@ const button = document.querySelector('.header-nav__btn');
 button.addEventListener('click', () => {
   button.classList.toggle('header-nav__btn--active')
 })
+
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map ('myMap', {
+        center: [56.369443297651316, 44.04006440994252],
+        zoom: 15,
+        controls: ["zoomControl", "fullscreenControl"]
+    });
+
+    
+}
+
+

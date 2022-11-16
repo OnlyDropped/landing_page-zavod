@@ -700,6 +700,16 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    gap: 0 15px;
+  }
+  &__map{
+    max-width: 663px;
+    width: 100%;
+    min-height: 489px;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 80%;
+    margin: 0 auto;
   }
 }
 .footer-bottom {

@@ -22,6 +22,12 @@
       gap: 20px 25px;
     }
   }
+  .footer-top {
+    &__map {
+      max-width: 560px;
+      margin: 0;
+    }
+  }
 }
 @media (max-width: 1205px) {
   .info {
@@ -114,6 +120,11 @@
       gap: 0 15px;
     }
   }
+  .footer-top {
+    &__map {
+      max-width: 545px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -193,6 +204,11 @@
       width: 250px;
     }
   }
+  .footer-top {
+    &__map {
+      max-width: 420px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -243,6 +259,11 @@
     }
     &__img {
       width: 230px;
+    }
+  }
+  .footer-top {
+    &__map {
+      max-width: 370px;
     }
   }
 }
@@ -373,6 +394,10 @@
     }
     &__inner {
       flex-direction: column;
+      gap: 15px 0;
+    }
+    &__map{
+      margin: 0 auto;
     }
     .modal {
       &__content {
